@@ -1,12 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders String Calculator header', () => {
   render(<App />);
   
-  const linkElement = screen.getByText((content, element) => {
-    return element.textContent.toLowerCase().includes('String Calculator');
-  });
+  const headerElement = screen.getByText('String Calculator', { selector: 'h3' });
   
-  expect(linkElement).toBeInTheDocument();
+  expect(headerElement).toBeInTheDocument();
 });
